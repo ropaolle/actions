@@ -8,30 +8,21 @@ on:
     branches:
       - main
     # will only run when a pull request that includes a change to a JavaScript (.js) file is opened
-    paths:
-      - '**.js'  
-  
-# defaults:
-#   run:
-#     shell: bash
-#     working-directory: ./
+    # paths:
+    #   - '**.js'
 
 jobs:
   test:
     name: 'Run unit tests'
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        name: 'Checkout repository'
       - uses: actions/setup-node@v3
         with:
           node-version: 18
           # https://github.com/actions/setup-node#caching-global-packages-data
           cache: 'npm'
-        name: 'Checkout repository'
       - name: 'Install Dependencies'
         run: npm ci
       - name: 'Run Tests'
@@ -39,14 +30,14 @@ jobs:
 
   lint:
     name: 'Run linter'
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         name: 'Checkout repository'
+      - uses: actions/setup-node@v3
+        with:
+          # node-version: 18
+          cache: 'npm'
       - name: 'Install Dependencies'
         run: npm i
       - name: 'Run Linter'
