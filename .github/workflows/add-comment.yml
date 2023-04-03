@@ -32,7 +32,10 @@ jobs:
           reactions: '+1'
   
   comment-with-api:
+    # https://docs.github.com/en/rest/issues/comments?apiVersion=2022-11-28#create-an-issue-comment
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - name: Create comment with API
         run: |
