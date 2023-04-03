@@ -6,6 +6,8 @@ on:
   issues:
     # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#issues
     types: [opened]
+  # Dispatch button on GitHub
+  workflow_dispatch: 
 
 jobs:
   comment-with-action:
