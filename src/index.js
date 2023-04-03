@@ -7,7 +7,6 @@ function fibonacci(n, mem = []) {
     return n;
   }
 
-  
   mem[n] = fibonacci(n - 1, mem) + fibonacci(n - 2, mem);
   return mem[n];
 }
@@ -16,4 +15,4 @@ module.exports = {
   fibonacci,
 };
 
-// Stuff 5!
+// Stuff 6!
