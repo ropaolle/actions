@@ -30,12 +30,14 @@ jobs:
 
             [1]: https://github.com/peter-evans/create-or-update-comment
           reactions: '+1'
-  
+
   comment-with-api:
     # https://docs.github.com/en/rest/issues/comments?apiVersion=2022-11-28#create-an-issue-comment
     runs-on: ubuntu-latest
     permissions:
       issues: write
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idneeds
+    # needs: comment-with-action
     steps:
       - name: Create comment with API
         run: |
