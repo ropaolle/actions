@@ -30,6 +30,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+          # https://github.com/actions/setup-node#caching-global-packages-data
           cache: 'npm'
         name: 'Checkout repository'
       - name: 'Install Dependencies'
