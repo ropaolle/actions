@@ -1,0 +1,49 @@
+name: CI Workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'web/**'
+  push:
+    branches:
+      - main
+    paths:
+      - 'web/**'
+
+# defaults:
+#   run:
+#     shell: bash
+#     working-directory: ./
+
+jobs:
+  test:
+    name: 'Run unit tests'
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: 'Checkout repository'
+      - name: 'Install Dependencies'
+        run: npm i
+      - name: 'Run Tests'
+        run: npm run test
+
+  lint:
+    name: 'Run linter'
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: 'Checkout repository'
+      - name: 'Install Dependencies'
+        run: npm i
+      - name: 'Run Linter'
+        run: npm run lint

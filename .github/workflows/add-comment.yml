@@ -1,13 +1,13 @@
 # https://github.com/marketplace/actions/create-or-update-comment
 
-name: CI
+name: TEST - Add comment with action and api
 
 on:
   issues:
     # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#issues
     types: [opened]
   # Dispatch button on GitHub
-  workflow_dispatch: 
+  workflow_dispatch:
 
 jobs:
   comment-with-action:
