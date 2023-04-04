@@ -6,12 +6,10 @@ Stuff: Markdown Yaml Preamble
 # TODO
 
 - [ ] CI/CD
-
-  - [ ] Build
-  - [?] security
-
+  - [ ] Deploy to Github
+  - [ ] Deploy to Cloudflare
+  - [x] Build
   - [x] test, lint
-
 - [ ] Testa att det fungerar med ett privat repo!
 - [x] Add badges
 - [x] Create comment with API
