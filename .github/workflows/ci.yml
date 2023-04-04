@@ -3,10 +3,17 @@ name: CI (test, lint & build)
 on:
   pull_request:
     branches:
-      - main
+      - dev
+      - staging
+      - prod
+    paths:
+      - "src/**"
+      - "lib/**"
   push:
     branches:
-      - main
+      - dev
+      - staging
+      - prod
     paths:
       - "src/**"
       - "lib/**"
