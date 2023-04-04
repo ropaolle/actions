@@ -23,3 +23,5 @@
   - [GitHub Actions documentation](https://docs.github.com/en/actions)
   - [Reusing workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows)
   - [Continuous deployment using Docker](https://levelup.gitconnected.com/automated-deployment-using-docker-github-actions-and-webhooks-54018fc12e32)
+- ESLINT
+  - [Example](https://cathalmacdonnacha.com/setting-up-eslint-prettier-in-vitejs)
