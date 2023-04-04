@@ -36,12 +36,11 @@ Stuff: Markdown Yaml Preamble
 
 [^1]: [Branch protection rules](https://github.com/ropaolle/actions/settings/branch_protection_rules)
 
-## Sync dev with main/prod
+## Sync dev with main
 
 ```sh
-git fetch origin
-git rebase release
-
-git fetch origin
-git merge release
+git checkout main
+git pull
+git checkout dev-test1
+git merge main
 ```
