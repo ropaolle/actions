@@ -1,6 +1,6 @@
 ---
-Order: 1
-Stuff: [1, 2, 3]
+Id: 1
+Stuff: Markdown Yaml Preamble
 ---
 
 # TODO
@@ -32,5 +32,13 @@ Stuff: [1, 2, 3]
   - [Docker action](https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action)
   - [Mermaid examples 1](https://gist.github.com/ChristopherA/bffddfdf7b1502215e44cec9fb766dfd)
   - [Mermaid examples 2](https://github.com/JakeSteam/Mermaid)
+  - [Cloudflare pages](https://developers.cloudflare.com/pages/how-to/use-direct-upload-with-continuous-integration/)
 
 [^1]: [Branch protection rules](https://github.com/ropaolle/actions/settings/branch_protection_rules)
+
+## Sync dev with main/prod
+
+```sh
+git fetch origin
+git rebase release
+```
