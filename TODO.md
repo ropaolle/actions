@@ -41,4 +41,7 @@ Stuff: Markdown Yaml Preamble
 ```sh
 git fetch origin
 git rebase release
+
+git fetch origin
+git merge release
 ```
