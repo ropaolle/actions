@@ -16,7 +16,7 @@ Stuff: [1, 2, 3]
 
 ## Setup
 
-- Require a pull [^1] request before merging [Branch protection rules](https://github.com/ropaolle/actions/settings/branch_protection_rules)
+- Require a pull request before merging [^1].
 
 ## LINKS
 
@@ -28,21 +28,27 @@ Stuff: [1, 2, 3]
   - [GitHub Actions documentation](https://docs.github.com/en/actions)
   - [Reusing workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows)
   - [Continuous deployment using Docker](https://levelup.gitconnected.com/automated-deployment-using-docker-github-actions-and-webhooks-54018fc12e32)
-- ESLINT
-  - [Example](https://cathalmacdonnacha.com/setting-up-eslint-prettier-in-vitejs)
+- EXTRAS
+  - [Mermaid examples 1](https://gist.github.com/ChristopherA/bffddfdf7b1502215e44cec9fb766dfd)
+  - [Mermaid examples 2](https://github.com/JakeSteam/Mermaid)
 
 
-Here's a simple footnote,[^1] and here's a longer one.[^bignote]
+## Mermaid
 
-[^1]: This is the first footnote.
+```Mermaid
+gitGraph:
+    commit "Ashish"
+    branch newbranch
+    checkout newbranch
+    commit id:"1111"
+    commit tag:"test"
+    checkout main
+    commit type: HIGHLIGHT
+    commit
+    merge newbranch
+    commit
+    branch b2
+    commit
+```
 
-[^bignote]: Here's one with multiple paragraphs and code.
-
-    Indent paragraphs to include them in the footnote.
-
-    `{ my code }`
-
-    Add as many paragraphs as you like.
-
-
-[^1]: Deba duba daba!
+[^1]: [Branch protection rules](https://github.com/ropaolle/actions/settings/branch_protection_rules)
