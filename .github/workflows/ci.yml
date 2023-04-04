@@ -7,9 +7,9 @@ on:
   push:
     branches:
       - main
-    # will only run when a pull request that includes a change to a JavaScript (.js) file is opened
-    # paths:
-    #   - '**.js'
+    paths:
+      - "src/**"
+      - "lib/**"
 
 jobs:
   test:
