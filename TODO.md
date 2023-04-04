@@ -32,23 +32,4 @@ Stuff: [1, 2, 3]
   - [Mermaid examples 1](https://gist.github.com/ChristopherA/bffddfdf7b1502215e44cec9fb766dfd)
   - [Mermaid examples 2](https://github.com/JakeSteam/Mermaid)
 
-
-## Mermaid
-
-```Mermaid
-gitGraph:
-    commit "Ashish"
-    branch newbranch
-    checkout newbranch
-    commit id:"1111"
-    commit tag:"test"
-    checkout main
-    commit type: HIGHLIGHT
-    commit
-    merge newbranch
-    commit
-    branch b2
-    commit
-```
-
 [^1]: [Branch protection rules](https://github.com/ropaolle/actions/settings/branch_protection_rules)
