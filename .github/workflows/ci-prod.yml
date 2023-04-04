@@ -3,7 +3,7 @@ name: CI Prod (test, lint & build)
 on:
   pull_request:
     branches:
-      - prod
+      - main
     paths:
       - "src/**"
       - "lib/**"
