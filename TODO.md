@@ -6,9 +6,12 @@ Stuff: Markdown Yaml Preamble
 # TODO
 
 - [ ] CI/CD
+
   - [ ] Build
-  - [ ] security
+  - [?] security
+
   - [x] test, lint
+
 - [ ] Testa att det fungerar med ett privat repo!
 - [x] Add badges
 - [x] Create comment with API
