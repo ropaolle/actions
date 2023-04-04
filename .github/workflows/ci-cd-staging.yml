@@ -1,4 +1,4 @@
-name: CI (test, lint & build)
+name: CI/CD Staging
 
 on:
   pull_request:
