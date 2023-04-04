@@ -46,5 +46,6 @@ git merge main
 ## Deploy to CloudFlare
 
 [Cloudflare pages](https://developers.cloudflare.com/pages/how-to/use-direct-upload-with-continuous-integration/)
+[GitHub Action](https://github.com/cloudflare/pages-action)
 
 [^1]: [Branch protection rules](https://github.com/ropaolle/actions/settings/branch_protection_rules)
