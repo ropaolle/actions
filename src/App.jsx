@@ -16,7 +16,10 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React + GitHub Actions (CloudFlare)</h1>
+      <h1>Vite + React + GitHub Actions</h1>
+      <h3>{process.env.CF_PAGES_BRANCH}</h3>
+      <h3>{process.env.CF_PAGES_URL}</h3>
+      <h3>{process.env.CUSTOM_VAR}</h3>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
