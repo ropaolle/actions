@@ -15,6 +15,13 @@ Stuff: Markdown Yaml Preamble
 - [x] Create comment with API
 - [x] Add code scanning (free on public repos :ship:)
 
+## Flow
+
+Production branch: main
+Staging branch: staging
+
+
+
 ## Setup
 
 - Require a pull request before merging [^1].
