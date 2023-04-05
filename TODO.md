@@ -8,18 +8,6 @@ Stuff: Markdown Yaml Preamble
 - [ ] ?
 - [ ] Testa att det fungerar med ett privat repo!
 
-## Commit flow
-
-Staging
-
-- Checkout the staging branch and create a new local feat/my-new-feature branch.
-- Make your changes and push to remote.
-- Create a pull request against staging.
-
-Main (production)
-
-- ?
-
 ## Setup
 
 - Require a pull request before merging [^1].
