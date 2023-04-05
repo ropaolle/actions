@@ -4,7 +4,7 @@ GitHub actions demo repo.
 
 ## Production
 
-[![CI Prod (test, lint & build)](https://github.com/ropaolle/actions/actions/workflows/ci-prod.yml/badge.svg?branch=main)](https://github.com/ropaolle/actions/actions/workflows/ci-prod.yml)
+[![CI Prod (test, lint & build)](https://github.com/ropaolle/actions/actions/workflows/ci-prod.yml/badge.svg)](https://github.com/ropaolle/actions/actions/workflows/ci-prod.yml)
 [![CD Prod (deploy to CloudFlare)](https://github.com/ropaolle/actions/actions/workflows/cd-prod.yml/badge.svg)](https://github.com/ropaolle/actions/actions/workflows/cd-prod.yml)
 
 ## Staging
