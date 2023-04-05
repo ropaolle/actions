@@ -55,21 +55,51 @@ jobs:
       - name: Run build
         run: npm run build
 
+  # deploy:
+  #   name: Deploy to GitHub Pages
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   runs-on: ubuntu-latest
+  #   needs: [build]
+  #   permissions:
+  #     contents: read
+  #     pages: write
+  #     id-token: write
+  #   # Allow one concurrent deployment
+  #   concurrency:
+  #     group: pages
+  #     cancel-in-progress: true
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v3
+  #     - name: Set up Node
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 18
+  #         cache: npm
+  #     - name: Install dependencies
+  #       run: npm install
+  #     - name: Build
+  #       run: npm run build
+  #     - name: Setup Pages
+  #       uses: actions/configure-pages@v3
+  #     - name: Upload artifact
+  #       uses: actions/upload-pages-artifact@v1
+  #       with:
+  #         path: ./dist
+  #     - name: Deploy to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v1
+
   deploy:
-    name: Deploy to GitHub Pages
+    name: Deploy to Cloudflare Pages
     environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      name: production
     runs-on: ubuntu-latest
-    needs: [build]
     permissions:
       contents: read
-      pages: write
-      id-token: write
-    # Allow one concurrent deployment
-    concurrency:
-      group: pages
-      cancel-in-progress: true
+      deployments: write
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -81,13 +111,12 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build
-        run: npm run build
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        run: npm run build -- --base=/
+      - name: Publish
+        uses: cloudflare/pages-action@1
         with:
-          path: ./dist
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 6366c6999e5353a03edd4b5b87499b69
+          projectName: preview.github-actions
+          directory: dist
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}  
