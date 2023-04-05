@@ -55,3 +55,30 @@ gitGraph:
     branch b2
     commit
 ```
+
+```mermaid
+%%{init: { 'logLevel': 'debug', 'theme': 'neutral' } }%%
+gitGraph:
+    commit id: "origin"
+    branch staging
+    checkout staging
+    commit id: "prepare to make a new feature"
+    branch feat/my-new-func
+    checkout feat/my-new-func
+    commit id: "make new feature"
+    checkout main
+    commit
+    commit id: "pull request 2"
+    checkout staging
+    commit id: "pull request 1"
+    checkout feat/my-new-func
+    merge staging tag:"fix errors"
+    checkout staging
+    merge main tag:"fix errors"
+    checkout staging
+    commit id: "asd"
+    checkout feat/my-new-func
+    commit
+    checkout main
+    commit
+```
