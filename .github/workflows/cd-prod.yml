@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build
-        run: npm run build
+        run: npm run build -- --base=/
       - name: Publish
         uses: cloudflare/pages-action@1
         with:
