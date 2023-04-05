@@ -2,5 +2,11 @@
 
 GitHub actions demo repo.
 
-[![CI Workflow](https://github.com/ropaolle/actions/actions/workflows/ci.yml/badge.svg)](https://github.com/ropaolle/actions/actions/workflows/ci.yml)
-[![Deploy static content to Pages](https://github.com/ropaolle/actions/actions/workflows/deploy.yml/badge.svg)](https://github.com/ropaolle/actions/actions/workflows/deploy.yml)
+## Production
+
+[![CI Prod (test, lint & build)](https://github.com/ropaolle/actions/actions/workflows/ci-prod.yml/badge.svg?branch=main)](https://github.com/ropaolle/actions/actions/workflows/ci-prod.yml)
+[![CD Prod (deploy to CloudFlare)](https://github.com/ropaolle/actions/actions/workflows/cd-prod.yml/badge.svg?branch=main)](https://github.com/ropaolle/actions/actions/workflows/cd-prod.yml)
+
+## Staging
+
+[![CI/CD Staging (test, lint, build & deploy)](https://github.com/ropaolle/actions/actions/workflows/ci-cd-staging.yml/badge.svg?branch=staging)](https://github.com/ropaolle/actions/actions/workflows/ci-cd-staging.yml)

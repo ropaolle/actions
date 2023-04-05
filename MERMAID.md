@@ -55,3 +55,17 @@ gitGraph:
     branch b2
     commit
 ```
+
+```mermaid
+gitGraph:
+    commit "Ashis asdasd"
+    branch branch2
+    checkout branch2
+    commit id:"ID 1234"
+    commit tag:"TAG 1234"
+    commit type: HIGHLIGHT
+    commit msg: "MSG asdasdasdsasdasdasd"
+    checkout main
+    commit
+    merge branch2
+```
