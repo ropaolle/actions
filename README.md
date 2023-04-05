@@ -33,7 +33,7 @@ On GitHub
    - If the pull request succeds we are now able to manually deploy to production.
 
 6. Deploy to production by running the action `CD Prod (deploy to CloudFlare)` against `main`.
-   - The production code is deployed to [https://github.com/cloudflare/pages-action](https://github.com/cloudflare/pages-action).
+   - The production code is deployed to [https://github-actions.pages.dev/](https://github-actions.pages.dev/).
 
 ```mermaid
 gitGraph:
