@@ -8,6 +8,11 @@ on:
     #   - src/**
     #   - lib/**
 
+env:
+  OLLE_TEST_KEY: Key0
+  VITE_OLLE_TEST_KEY: Key1
+  VITE_OLLE_TEST_KEY2: Key2
+
 jobs:
   test:
     name: Run unit tests
