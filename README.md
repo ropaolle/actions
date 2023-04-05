@@ -56,7 +56,7 @@ gitGraph:
     merge main
     checkout staging
     commit
-    checkout feat/my-new-fun
+    checkout feat/my-new-func
     checkout main
     commit
 ```
