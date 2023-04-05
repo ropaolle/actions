@@ -8,6 +8,12 @@ on:
     #   - src/**
     #   - lib/**
 
+env:
+  DAY_OF_WEEK: Monday
+  OLLE_TEST_KEY: Key0
+  VITE_OLLE_TEST_KEY: Key1
+  VITE_OLLE_TEST_KEY2: Key2
+
 jobs:
   test:
     name: Run unit tests
