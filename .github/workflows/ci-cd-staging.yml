@@ -118,6 +118,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 6366c6999e5353a03edd4b5b87499b69
-          projectName: preview.github-actions
+          projectName: github-actions
           directory: dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}  
