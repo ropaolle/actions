@@ -120,4 +120,4 @@ jobs:
           accountId: 6366c6999e5353a03edd4b5b87499b69
           projectName: github-actions
           directory: dist
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}  
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
