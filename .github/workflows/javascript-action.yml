@@ -2,6 +2,10 @@ name: JavaScript Job
 
 on:
   workflow_dispatch:
+    inputs:
+      PR_number:
+        description: "Pull request number"
+        required: true
 
 jobs:
   hello_world_job:
