@@ -1,6 +1,7 @@
 # TODO
 
 - [ ] Deploy NextJS app
+  - [Free NodeJs hosting](https://geshan.com.np/blog/2021/01/free-nodejs-hosting/)
 - [ ] Deploy NodeJs app to Docker
 
 ## Setup
