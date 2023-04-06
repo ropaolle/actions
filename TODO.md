@@ -1,6 +1,7 @@
 # TODO
 
-- [ ] ?
+- [ ] Deploy NextJS app
+- [ ] Deploy NodeJs app to Docker
 
 ## Setup
 
