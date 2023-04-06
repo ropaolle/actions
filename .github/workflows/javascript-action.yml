@@ -12,8 +12,11 @@ jobs:
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - name: Install Dependencies
+        run: npm ci
       - name: Hello world action step
-        uses: ./actions # Uses an action in the root directory
+        uses: ./actions
         id: hello
         with:
           who-to-greet: "Mona the Octocat"
