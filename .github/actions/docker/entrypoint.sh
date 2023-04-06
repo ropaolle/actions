@@ -5,6 +5,7 @@ time=$(date)
 echo "time=$time" >>$GITHUB_OUTPUT
 
 # Run below to make the file executable
+# chmod +x .github/actions/docker/entrypoint.sh
 # git add .github/actions/docker/entrypoint.sh
 # git update-index --chmod=+x .github/actions/docker/entrypoint.sh
 # 
