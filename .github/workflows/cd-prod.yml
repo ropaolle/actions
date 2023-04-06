@@ -3,6 +3,10 @@ name: CD Prod (deploy to CloudFlare)
 on:
   workflow_dispatch:
 
+env:
+  #  Can be accessed in the app with {import.meta.env.VITE_BUILD_ENVIRONMENT}
+  VITE_BUILD_ENVIRONMENT: Production build
+
 jobs:
   deploy:
     name: Deploy to Cloudflare Pages
