@@ -1,4 +1,4 @@
-name: CD Prod (deploy to CloudFlare)
+name: CD Prod
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ env:
 
 jobs:
   deploy:
-    name: Deploy to Cloudflare Pages (production)
+    name: Deploy to Cloudflare (production)
     environment:
       name: production
     runs-on: ubuntu-latest
