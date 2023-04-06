@@ -1,6 +1,6 @@
 # TODO
 
-- [ ] Deploy NextJS app
+- [ ] Deploy NextJS app (aws, azure and gcp)
   - [Free NodeJs hosting](https://geshan.com.np/blog/2021/01/free-nodejs-hosting/)
 - [ ] Deploy NodeJs app to Docker
 
