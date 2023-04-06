@@ -5,7 +5,11 @@ on:
     inputs:
       PR_number:
         description: "Pull request number"
+        required: false
+      who_to_greet: # id of input
+        description: "Who to greet"
         required: true
+        default: "World"  
 
 jobs:
   hello_world_job:
@@ -24,6 +28,7 @@ jobs:
         id: hello
         with:
           who-to-greet: "Mona the Octocat"
+          who-to-greet2: ${{ github.event.inputs.who_to_greet }}
       # Use the output from the `hello` step
       - name: Get the output time
         run: |
