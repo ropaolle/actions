@@ -80,7 +80,7 @@ jobs:
         run: npm run build    
 
   deploy:
-    name: Deploy to Cloudflare Pages
+    name: Deploy to Cloudflare Pages (statging)
     environment:
       name: production
     runs-on: ubuntu-latest
