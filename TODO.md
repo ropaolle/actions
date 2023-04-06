@@ -1,12 +1,6 @@
----
-Id: 1
-Stuff: Markdown Yaml Preamble
----
-
 # TODO
 
-- [ ] Merging is messy
-- [ ] Testa att det fungerar med ett privat repo!
+- [ ] ?
 
 ## Setup
 

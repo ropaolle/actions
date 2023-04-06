@@ -1,65 +1,16 @@
-name: CI/CD Staging (test, lint, build & deploy)
+name: CI/CD Staging
 
 on:
   pull_request:
     branches:
       - staging
-    # paths:
-    #   - src/**
-    #   - lib/**
-  workflow_dispatch:  
+  workflow_dispatch:
 
 env:
   #  Can be accessed in the app with {import.meta.env.VITE_BUILD_ENVIRONMENT}
   VITE_BUILD_ENVIRONMENT: Staging build
 
 jobs:
-  # test:
-  #   name: Run unit tests
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: actions/setup-node@v3
-  #       with:
-  #         node-version: 18
-  #         cache: npm
-  #         cache-dependency-path: "**/package-lock.json"
-  #     - name: Install Dependencies
-  #       run: npm ci
-  #     - name: Run Tests
-  #       run: npm run test
-
-  # lint:
-  #   name: Run linter
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: actions/setup-node@v3
-  #       with:
-  #         node-version: 18
-  #         cache: npm
-  #         cache-dependency-path: "**/package-lock.json"
-  #     - name: Install Dependencies
-  #       run: npm i
-  #     - name: Run Linter
-  #       run: npm run lint
-
-  # build:
-  #   name: Run build
-  #   runs-on: ubuntu-latest
-  #   needs: [test, lint]
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: actions/setup-node@v3
-  #       with:
-  #         node-version: 18
-  #         cache: npm
-  #         cache-dependency-path: "**/package-lock.json"
-  #     - name: Install Dependencies
-  #       run: npm i
-  #     - name: Run build
-  #       run: npm run build
-
   test-lint-build:
     name: Run unit tests, lint and build
     runs-on: ubuntu-latest
@@ -75,12 +26,12 @@ jobs:
       - name: Run Tests
         run: npm run test
       - name: Run Linter
-        run: npm run lint  
+        run: npm run lint
       - name: Run Build
-        run: npm run build    
+        run: npm run build
 
   deploy:
-    name: Deploy to Cloudflare Pages (statging)
+    name: Deploy to Cloudflare (staging)
     environment:
       name: production
     runs-on: ubuntu-latest
@@ -98,13 +49,10 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm install
-      - name: 'Create env file'
-        run: |
-          echo "${{ vars.ENV_FILE }}" > .env.test
-          cat .env
-          cat .env.test
-          ls -la
-          echo "${{ vars }}"
+      # - name: 'Create .env.test file'
+      #   run: |
+      #     echo "${{ vars.ENV_FILE }}" > .env.test
+      #     ls -la
       - name: Build
         run: npm run build -- --base=/
       - name: Publish
@@ -115,40 +63,3 @@ jobs:
           projectName: github-actions
           directory: dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-  
-  # deploy:
-  #   name: Deploy to GitHub Pages
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   runs-on: ubuntu-latest
-  #   needs: [build]
-  #   permissions:
-  #     contents: read
-  #     pages: write
-  #     id-token: write
-  #   # Allow one concurrent deployment
-  #   concurrency:
-  #     group: pages
-  #     cancel-in-progress: true
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v3
-  #     - name: Set up Node
-  #       uses: actions/setup-node@v3
-  #       with:
-  #         node-version: 18
-  #         cache: npm
-  #     - name: Install dependencies
-  #       run: npm install
-  #     - name: Build
-  #       run: npm run build
-  #     - name: Setup Pages
-  #       uses: actions/configure-pages@v3
-  #     - name: Upload artifact
-  #       uses: actions/upload-pages-artifact@v1
-  #       with:
-  #         path: ./dist
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v1
