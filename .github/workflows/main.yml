@@ -1,3 +1,5 @@
+name: JavaScript Job
+
 on:
   workflow_dispatch:
 
