@@ -2,14 +2,10 @@
 
 GitHub actions demo repo.
 
-## Production
+[![CI/CD Staging](https://github.com/ropaolle/actions/actions/workflows/ci-cd-staging.yml/badge.svg?branch=staging)](https://github.com/ropaolle/actions/actions/workflows/ci-cd-staging.yml)
+[![CI Prod](https://github.com/ropaolle/actions/actions/workflows/ci-prod.yml/badge.svg)](https://github.com/ropaolle/actions/actions/workflows/ci-prod.yml)
+[![CD Prod](https://github.com/ropaolle/actions/actions/workflows/cd-prod.yml/badge.svg)](https://github.com/ropaolle/actions/actions/workflows/cd-prod.yml)
 
-[![CI Prod (test, lint & build)](https://github.com/ropaolle/actions/actions/workflows/ci-prod.yml/badge.svg)](https://github.com/ropaolle/actions/actions/workflows/ci-prod.yml)
-[![CD Prod (deploy to CloudFlare)](https://github.com/ropaolle/actions/actions/workflows/cd-prod.yml/badge.svg)](https://github.com/ropaolle/actions/actions/workflows/cd-prod.yml)
-
-## Staging
-
-[![CI/CD Staging (test, lint, build & deploy)](https://github.com/ropaolle/actions/actions/workflows/ci-cd-staging.yml/badge.svg)](https://github.com/ropaolle/actions/actions/workflows/ci-cd-staging.yml)
 
 ## Flow to create a new feature
 
@@ -24,7 +20,7 @@ On GitHub
 4. Open a pull request against the `staging` branch
 
    - To complete the pull request the checks test, lint, build and deploy have to pass.
-   - The new code is deployed to [https://ropaolle.github.io/actions/](https://ropaolle.github.io/actions/).
+   - The new code is deployed to [https://staging.github-actions.pages.dev/](https://staging.github-actions.pages.dev/).
    - If the code works onthe staging server we can now continue and open a pull request agaist main.
 
 5. Open a pull request against the `main` branch
@@ -34,6 +30,8 @@ On GitHub
 
 6. Deploy to production by running the action `CD Prod (deploy to CloudFlare)` against `main`.
    - The production code is deployed to [https://github-actions.pages.dev/](https://github-actions.pages.dev/).
+
+### Mermaid gitGraph
 
 ```mermaid
 gitGraph:
