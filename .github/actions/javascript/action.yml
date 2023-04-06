@@ -7,10 +7,6 @@ inputs:
     description: "Who to greet"
     required: true
     default: "World"
-  who-to-greet2: # id of input
-    description: "Who to greet 2"
-    required: true
-    default: "World 2"
 outputs:
   time: # id of output
     description: "The time we greeted you"

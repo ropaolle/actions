@@ -2,22 +2,18 @@ name: JavaScript Job
 
 on:
   workflow_dispatch:
+    # Input in the GitHub actions gui
     inputs:
       who_to_greet: # id of input
         description: "Who to greet"
         required: true
-        default: "World"
-      who_to_greet_2: # id of input
-        description: "Who to greet b"
-        required: false
+        default: "RopaOlle"
 
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      # To use this repository's private action,
-      # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -27,8 +23,8 @@ jobs:
         uses: ./.github/actions/javascript
         id: hello
         with:
-          who-to-greet: "Mona the Octocat"
-          who-to-greet2: ${{ github.event.inputs.who_to_greet_2 }}
+          #  Input from `/home/olle/GITHOME/actions/.github/actions/javascript/action.yml`
+          who-to-greet: ${{ github.event.inputs.who_to_greet }}
       # Use the output from the `hello` step
       - name: Get the output time
         run: |
