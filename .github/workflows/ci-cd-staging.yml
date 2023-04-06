@@ -80,7 +80,7 @@ jobs:
         run: npm run build    
 
   deploy:
-    name: Deploy to Cloudflare Pages
+    name: Deploy to Cloudflare Pages (statging)
     environment:
       name: production
     runs-on: ubuntu-latest
@@ -103,8 +103,7 @@ jobs:
           echo "${{ vars.ENV_FILE }}" > .env.test
           cat .env
           cat .env.test
-          ls
-          ll
+          ls -la
           echo "${{ vars }}"
       - name: Build
         run: npm run build -- --base=/

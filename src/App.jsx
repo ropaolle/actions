@@ -7,10 +7,6 @@ import "./App.css"
 function App() {
   const [count, setCount] = useState(0)
 
-  console.info(process.env)
-  console.info(import.meta)
-  console.info(import.meta.env)
-
   return (
     <div className="App">
       <div>
