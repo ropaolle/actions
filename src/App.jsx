@@ -6,6 +6,11 @@ import "./App.css"
 
 function App() {
   const [count, setCount] = useState(0)
+
+  console.info(process.env)
+  console.info(import.meta)
+  console.info(import.meta.env)
+
   return (
     <div className="App">
       <div>
@@ -17,10 +22,12 @@ function App() {
         </a>
       </div>
       <h1>Vite + React + GitHub Actions</h1>
-      <h3>OLLE_TEST_KEY: {process.env.OLLE_TEST_KEY}</h3>
-      <h3>VITE_OLLE_TEST_KEY: {process.env.VITE_OLLE_TEST_KEY}</h3>
-      <h3>VITE_OLLE_TEST_KEY2: {import.meta.env.VITE_OLLE_TEST_KEY2}</h3>
-      <h3>VITE_TEST_KEY: {import.meta.env.VITE_TEST_KEY}</h3>
+      <h3>
+        Build environment: {import.meta.env.VITE_BUILD_ENVIRONMENT || "?"}
+      </h3>
+      <small>import.meta.env.VITE_BUILD_ENVIRONMENT</small>
+      <h3>VITE_DOTENV_KEY: {import.meta.env.VITE_DOTENV_KEY || "?"}</h3>
+      <small>import.meta.env.VITE_DOTENV_KEY</small>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
