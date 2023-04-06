@@ -9,7 +9,11 @@ on:
       who_to_greet: # id of input
         description: "Who to greet"
         required: true
-        default: "World"  
+        default: "World"
+      who_to_greet_b: # id of input
+        description: "Who to greet b"
+        required: true
+        default: "World b"
 
 jobs:
   hello_world_job:
@@ -28,7 +32,8 @@ jobs:
         id: hello
         with:
           who-to-greet: "Mona the Octocat"
-          who-to-greet2: ${{ github.event.inputs.who_to_greet }}
+          who_to_greet: ${{ github.event.inputs.who_to_greet }}
+          who_to_greet_b:
       # Use the output from the `hello` step
       - name: Get the output time
         run: |
