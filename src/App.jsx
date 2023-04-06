@@ -25,7 +25,7 @@ function App() {
       <h3>
         Build environment: {import.meta.env.VITE_BUILD_ENVIRONMENT || "?"}
       </h3>
-      <small>import.meta.env.VITE_BUILD_ENVIRONMENT</small>
+      {/* <small>import.meta.env.VITE_BUILD_ENVIRONMENT</small> */}
       <h3>VITE_DOTENV_KEY: {import.meta.env.VITE_DOTENV_KEY || "?"}</h3>
       {/* <small>import.meta.env.VITE_DOTENV_KEY</small> */}
       <div className="card">
