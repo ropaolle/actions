@@ -103,8 +103,7 @@ jobs:
           echo "${{ vars.ENV_FILE }}" > .env.test
           cat .env
           cat .env.test
-          ls
-          ll
+          ls -la
           echo "${{ vars }}"
       - name: Build
         run: npm run build -- --base=/
